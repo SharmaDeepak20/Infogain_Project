@@ -1,0 +1,34 @@
+PRE-REQUISITES FOR PROJECT
+
+All Users are created by Admin
+One entry of Admin should be created manually which is in DataBase Script
+Please insert all entries in capital letters for better representation
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WORKFLOW-USER
+1. First Page or Lending Page is index.jsp
+2. After verifying the cardNumber from database it redirects to pinvalidation.jsp
+3. After validating pin it will redirects to homepage.jsp
+4. User will get all his functionality like deposit, withdrawal, request for chequebook, change Phone Number, Reset Pin along with an drop down inbox and logout option.
+5. The workflow of these functionalities is as follows
+   deposit----->Deposit/index.jsp------>DepositServlet------->DatabaseDao-------->DepositServlet------->Homepage.jsp
+   withdrawal-->Withdrawal/index.jsp--->WithdrawalServlet---->DatabaseDao-------->WithdrawalServlet---->Homepage.jsp
+   ChequeBook-->ChequeBookServlet------>DatabaseDao-------->Homepage.jsp
+   Transaction->MiniStatement---------->displayStatement
+   Transaction->CurrentBalance---------->displayCurrentBalance
+   ChangePhoneNumber--->ChangePhoneNumberSevlet(OTP Generation)-->homepage-->OTP Verification-->ChangePhoneNumberSevletDB-->DatabaseDao-->Homepage.jsp
+   Reset_Pin-->Verifiction of Old OTP-->ChangePinNumberServlet-->DatabaseDao-->Homepage.jsp
+   
+
+WORKFLOW-ADMIN
+1. Admin.jsp is the homepage.
+2. After verification of adminid and password it redirects to Admin/index.jsp.
+3. Admin have certain functionality like Create and Show Users, Generate reports like deposit report, withdrawal report, transaction report
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TEAM MEMBERS
+1. Deepak Sharma
+2. Rohit Mishra
+3. Sheetal Bhandari
+4. Shiva Verma
+5. Srishti Bisht
